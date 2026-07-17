@@ -22,14 +22,24 @@ With a background in Horticulture/Plant Science (M.Sc., research in floriculture
 - Strongest classes: Healthy (99% recall), Yellow Leaf Curl Virus (98% precision)
 - Weakest class: Early Blight (78% recall) — visually confused with Septoria Leaf Spot and Late Blight, which is agronomically reasonable since all three cause similar dark leaf lesions
 
-![Training Curves](training_history.png)
+ ![Training Curves](training_history.png)
 ![Confusion Matrix](confusion_matrix.png)
+
+## Limitations
+This model was trained and validated entirely on the PlantVillage dataset, which consists of images taken under controlled lab conditions — plain backgrounds, consistent lighting, and leaves photographed in isolation. As a result, it is unlikely to generalize well to real-world field photos, which typically have cluttered backgrounds, variable lighting, multiple leaves, and different camera angles. Testing on real-field images and fine-tuning with more diverse data would be a natural next step to make this model production-ready.
+
+## Example Predictions
+Below are sample predictions from the model on unseen validation images:
+
+![Example 1](example_prediction_1.png)
+![Example 2](example_prediction_2.png)
+![Example 3](example_prediction_3.png)
 
 ## How to Run
 1. Clone this repo
 2. Install dependencies: `pip install tensorflow scikit-learn seaborn matplotlib pillow`
 3. Download the [PlantVillage dataset](https://www.kaggle.com/datasets/emmarex/plantdisease) and place the tomato class folders under `data/PlantVillage/`
-4. Open `CODE.ipynb` and run all cells
+4. Open `tomato_disease_classifier.ipynb` and run all cells
 
 ## Demo
 The notebook includes a `predict_image()` function — pass in any tomato leaf image path and it returns the predicted disease class with a confidence score.
