@@ -1,0 +1,5 @@
+data/
+data_tomato/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
