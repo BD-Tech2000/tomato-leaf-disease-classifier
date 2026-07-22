@@ -45,4 +45,4 @@ Below are sample predictions from the model on unseen validation images:
 The notebook includes a `predict_image()` function — pass in any tomato leaf image path and it returns the predicted disease class with a confidence score.
 
 ## Author
-Abdul Rehman — background in Agriculture/Horticulture, transitioning into AI/ML.
+Abdul Rehman — M.Sc. Horticulture, integrating machine learning methods into plant science and postharvest research.
